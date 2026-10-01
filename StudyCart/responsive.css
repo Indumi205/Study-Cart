@@ -1,0 +1,43 @@
+@media (max-width: 900px) {
+    .hero-text h1 { font-size: 2rem; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .product-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+}
+
+@media (max-width: 700px) {
+    .hero { padding: 1.8rem; }
+    .hero-text h1 { font-size: 1.6rem; }
+    .hero-illustration { display: none; }
+
+    .nav-container { padding: 0.8rem 1rem; }
+    .nav-menu { gap: 0.2rem; }
+    .nav-btn { padding: 0.5rem 0.7rem; font-size: 0.85rem; }
+    .nav-btn span { display: none; }
+    .nav-btn i { font-size: 1.1rem; }
+
+    .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+
+    .step { padding: 0.5rem; font-size: 0.8rem; }
+    .step-connector { width: 15px; }
+
+    .cart-item-total { text-align: left; }
+    .cart-item { flex-direction: column; align-items: flex-start; }
+
+    .toast { right: 1rem; left: 1rem; }
+
+    .product-grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; }
+
+    .checkout-card { padding: 1.3rem; }
+    .info-hero { padding: 2rem 1.5rem; }
+    .info-hero h1 { font-size: 1.6rem; }
+}
+
+@media (max-width: 400px) {
+    .hero-text h1 { font-size: 1.4rem; }
+    .hero-badge { font-size: 0.8rem; padding: 0.5rem 1rem; }
+    .product-grid { grid-template-columns: 1fr; }
+    .page-title { font-size: 1.5rem; }
+    .coupon-entry { align-items: stretch; }
+    .coupon-entry .btn-secondary { padding: 0.65rem 0.8rem; }
+}
