@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyCart 2026 · Best for Kids, Given with Love</title>
+
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+   
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="logo" type="button" onclick="showPage('shop')">
+                <i class="fas fa-pencil-alt"></i>
+                <span>Study<span class="accent">Cart</span> <span style="font-size:0.85rem; color:#a855f7;">2026</span></span>
+            </button>
+            <div class="nav-menu">
+                <button class="nav-btn active" data-page="shop" aria-label="Shop" aria-current="page" onclick="showPage('shop')">
+                    <i class="fas fa-store" aria-hidden="true"></i> <span>Shop</span>
+                </button>
+                <button class="nav-btn" data-page="about" aria-label="About Us" onclick="showPage('about')">
+                    <i class="fas fa-heart" aria-hidden="true"></i> <span>About Us</span>
+                </button>
+                <button class="nav-btn" data-page="contact" aria-label="Contact" onclick="showPage('contact')">
+                    <i class="fas fa-envelope" aria-hidden="true"></i> <span>Contact</span>
+                </button>
+                <button class="nav-btn cart-nav-btn" data-page="cart" aria-label="Cart" onclick="showPage('cart')">
+                    <i class="fas fa-shopping-bag" aria-hidden="true"></i> <span>Cart</span>
+                    <span class="cart-nav-badge" id="navCartCount" aria-label="Items in cart" aria-live="polite">0</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+   
+    <div class="page active" id="page-shop">
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Best for Kids, <span class="gradient-text">Given with Love</span> 💜</h1>
+                <p>StudyCart 2026 brings you the finest stationery for your children. Quality you can trust, prices you'll love — delivered to your doorstep across Sri Lanka.</p>
+                <div class="hero-badge">
+                    <i class="fas fa-gift"></i> 10% OFF for kids — Code: <strong>KIDS10</strong>
+                </div>
+            </div>
+            <div class="hero-illustration">
+                <span>✏️</span>
+                <span>📚</span>
+                <span>🎨</span>
+            </div>
+        </section>
+
+        <div class="toolbar">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" aria-label="Search products" placeholder="Search notebooks, pens, highlighters...">
+            </div>
+            <div class="filter-chips" id="filterChips">
+                <button class="chip active" type="button" data-category="all" aria-pressed="true"><i class="fas fa-th-large" aria-hidden="true"></i> All</button>
+                <button class="chip" type="button" data-category="writing" aria-pressed="false"><i class="fas fa-pen" aria-hidden="true"></i> Writing</button>
+                <button class="chip" type="button" data-category="paper" aria-pressed="false"><i class="fas fa-book" aria-hidden="true"></i> Paper</button>
+                <button class="chip" type="button" data-category="art" aria-pressed="false"><i class="fas fa-palette" aria-hidden="true"></i> Art</button>
+                <button class="chip" type="button" data-category="organizer" aria-pressed="false"><i class="fas fa-folder" aria-hidden="true"></i> Organizers</button>
+            </div>
+        </div>
+
+        <div id="productGrid" class="product-grid"></div>
+    </div>
+
+    
+    <div class="page" id="page-cart">
+        <h1 class="page-title"><i class="fas fa-shopping-bag"></i> Your Cart</h1>
+        <p class="page-subtitle">Review your items, change quantities, or remove them before checkout.</p>
+        <div id="cartContent"></div>
+    </div>
+
+   
+    <div class="page" id="page-checkout">
+        <h1 class="page-title"><i class="fas fa-credit-card"></i> Checkout</h1>
+        <p class="page-subtitle">Complete your order in three easy steps.</p>
+
+        <div class="checkout-steps">
+            <div class="step active" id="stepIndicator1">
+                <div class="step-circle">1</div>
+                <span>Delivery</span>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step" id="stepIndicator2">
+                <div class="step-circle">2</div>
+                <span>Payment</span>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step" id="stepIndicator3">
+                <div class="step-circle">3</div>
+                <span>Confirm</span>
+            </div>
+        </div>
+
+        <div class="checkout-card" id="checkoutContent" aria-live="polite"></div>
+    </div>
+
+    <div class="page" id="page-about">
+        <div class="info-hero">
+            <h1>About StudyCart 2026</h1>
+            <p>Best for kids, given with love — that's not just our tagline, it's our promise to every family in Sri Lanka.</p>
+        </div>
+
+        <div class="story-box">
+            <h2>Our Story 💜</h2>
+            <p>StudyCart 2026 was born from a simple idea: every child deserves access to quality stationery that makes learning joyful. We noticed that parents across Sri Lanka were struggling to find reliable, affordable, and beautiful school supplies — so we built a place where they could find everything under one roof.</p>
+            <p>From the very beginning, we made a commitment: <strong>"Daruwanta hodama de, adaren"</strong> — the best for children, given with love. Every product in our catalog is hand-picked with care, tested for quality, and priced fairly so that no child is left behind.</p>
+            <p>Today, we serve thousands of families across the island. But we're not just selling stationery — we're helping parents give their children the tools to dream, create, and succeed. And that's the most beautiful thing we could ever do.</p>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="info-card-icon"><i class="fas fa-heart"></i></div>
+                <h3>Made with Love</h3>
+                <p>Every product is chosen with a parent's heart. If we wouldn't give it to our own kids, we won't sell it to yours.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon"><i class="fas fa-star"></i></div>
+                <h3>Premium Quality</h3>
+                <p>We partner only with trusted brands and suppliers who share our commitment to excellence and child safety.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon"><i class="fas fa-shipping-fast"></i></div>
+                <h3>Island-wide Delivery</h3>
+                <p>From Colombo to Jaffna, Galle to Batticaloa — we deliver to every corner of Sri Lanka, fast and safely.</p>
+            </div>
+            <div class="info-card">
+                <div class="info-card-icon"><i class="fas fa-tags"></i></div>
+                <h3>Fair Prices</h3>
+                <p>Quality shouldn't be a luxury. We keep our prices honest so every family can afford the best for their kids.</p>
+            </div>
+        </div>
+
+        <div class="story-box">
+            <h2>Why Parents Trust Us</h2>
+            <p>We understand that buying stationery for your children is an act of love. That's why we go the extra mile in everything we do — from our careful product selection to our easy returns policy. When you shop with StudyCart 2026, you're not just buying pens and notebooks. You're investing in your child's future. And we take that responsibility seriously.</p>
+        </div>
+    </div>
+
+    <div class="page" id="page-contact">
+        <div class="info-hero">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you. Whether you have a question about an order, need help choosing products, or just want to say hello — we're here for you.</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-info-card">
+                <h2 style="font-size:1.3rem; color:var(--primary-dark); margin-bottom:1.2rem; font-weight:800;">Get in Touch</h2>
+                <div class="contact-item">
+                    <div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+94 11 234 5678</p>
+                        <p style="font-size:0.82rem;">Mon–Sat, 9am–6pm</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>hello@studycart.lk</p>
+                        <p style="font-size:0.82rem;">We reply within 24 hours</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <h4>Address</h4>
+                        <p>No. 42, Galle Road,</p>
+                        <p>Colombo 04, Sri Lanka</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-item-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p>+94 77 123 4567</p>
+                        <p style="font-size:0.82rem;">Quick questions? Message us!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-info-card">
+                <h2 style="font-size:1.3rem; color:var(--primary-dark); margin-bottom:1.2rem; font-weight:800;">Send a Message</h2>
+                <form class="contact-form" id="contactForm" onsubmit="submitContact(event)">
+                    <div class="form-group">
+                        <label for="contactName">Your Name <span class="required">*</span></label>
+                        <input type="text" class="form-control" id="contactName" placeholder="e.g. Nimal Perera" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email <span class="required">*</span></label>
+                        <input type="email" class="form-control" id="contactEmail" placeholder="you@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message <span class="required">*</span></label>
+                        <textarea class="form-control" id="contactMessage" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <p class="demo-notice" role="note">This demo cannot send messages; your draft stays in the form.</p>
+                    <button type="submit" class="btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fas fa-pencil-alt" style="color:var(--primary);"></i>
+                StudyCart 2026
+            </div>
+            <div class="footer-links">
+                <button onclick="showPage('shop')">Shop</button>
+                <button onclick="showPage('about')">About Us</button>
+                <button onclick="showPage('contact')">Contact</button>
+                <button onclick="showPage('cart')">Cart</button>
+            </div>
+        </div>
+        <div class="footer-copy">
+            © 2026 StudyCart · Best for kids, given with love 💜 · Made in Sri Lanka 
+        </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Added to cart!</span>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="helpers.js"></script>
+    <script src="shop.js"></script>
+    <script src="cart.js"></script>
+    <script src="checkout.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
