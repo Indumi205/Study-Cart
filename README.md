@@ -61,6 +61,4 @@ Works on any static host:
 - Vercel
 - Any web server
 
- 📄 License
 
-MIT · Made with 💜 in Sri Lanka 
