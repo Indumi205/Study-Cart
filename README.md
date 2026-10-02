@@ -20,15 +20,25 @@ A complete stationery e-commerce website for Sri Lankan families, built with van
  📁 Project Structure
 
  StudyCart/
+ 
 ├── index.html
+
 ├── style.css
+
 ├── responsive.css
+
 ├── data.js
+
 ├── helpers.js
+
 ├── shop.js
+
 ├── cart.js
+
 ├── checkout.js
+
 ├── app.js
+
 └── README.md
 
 
